@@ -25,15 +25,19 @@ This project provides a collection of tools for implementing and testing various
 project-root/
 │
 ├── simple_query/        # Basic RAG implementation
-│   ├── expansion_answer.py
+│   ├── app.py
 │   └── README.md        # Detailed explanation for Simple Query
 │
 ├── augmenting_query/    # Augmented query RAG implementation
-│   ├── expansion_queries.py
+│   ├── query_aug.py
+|   ├── helper_utils.py
 │   └── README.md        # Documentation for Augmenting the Query
 │
-├── multi_query/         # Multi-query RAG implementation
+├── multi_query/
+|   ├── multi_query.py        # Multi-query RAG implementation
 │   ├── reranking.py
+|   ├── helper_utils.py
+|   ├── dpr_technique.py
 │   └── README.md        # Documentation for Multi-query
 │
 ├── data/                # Folder for storing PDF documents
@@ -56,7 +60,7 @@ project-root/
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/rag-framework.git
+   git clone [https://github.com/your-repo/rag-framework.git](https://github.com/Ayodimeji1/AI_RAG.git)
    cd rag-framework
    ```
 
@@ -75,23 +79,23 @@ project-root/
 ## Usage
 ### Workflow
 1. **Simple Query**:
-   - Navigate to the `simple_query/` folder and run:
+   - Navigate to the `RAG1.0/` folder and run:
      ```bash
-     python expansion_answer.py
+     python app.py
      ```
    - This module retrieves documents based on a single input query.
 
 2. **Augmenting the Query**:
-   - Navigate to the `augmenting_query/` folder and run:
+   - Navigate to the `RAG2.0/` folder and run:
      ```bash
-     python expansion_queries.py
+     python query_aug.py
      ```
    - This module generates and executes augmented queries for improved retrieval.
 
 3. **Multi-query**:
-   - Navigate to the `multi_query/` folder and run:
+   - Navigate to the `RAG3.0/` folder and run:
      ```bash
-     python reranking.py
+     python multi_query.py
      ```
    - This module combines multiple queries, deduplicates results, and reranks them based on relevance scores.
 
